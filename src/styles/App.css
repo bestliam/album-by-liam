@@ -1,0 +1,13 @@
+/* Base Application Styles */
+html,body {
+  color: #fff;
+  background: #222;
+  height: 100%;
+  width:100%;
+}
+
+.stage{
+  height: 680px;
+  width:100%;
+  background-color: aliceblue;
+}
