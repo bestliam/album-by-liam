@@ -1,30 +1,35 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
-
+import ImgFigure from './ImgFigure';
 import React from 'react';
-
-let yeomanImage = require('../images/1.jpg');
 
 
 /*
  * 主组件
  */
 class AppComponent extends React.Component {
-  render() {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            imgsArrangeArr: [
+                /*{
+                 pos:{
+                 left: '0',
+                 top: '0'
+                 }
+                 rotate: 0,    //旋转角度
+                 isInverse: false,  //图片正反面
+                 isCenter: false,  //图片是否居中
+                 }*/
+            ]};
+    }
+
+    render() {
     return (
       <section className="stage">
           <section className="img-sec">
-              <figure>
-                  <img src={yeomanImage} alt="图片"/>
-                  <figcaption>
-                      <h2 className="img-title">图片名称</h2>
-                      <div className="img-back">
-                          <p>
-                              图片描述信息
-                          </p>
-                      </div>
-                  </figcaption>
-              </figure>
+              <ImgFigure />
           </section>
       </section>
     );
