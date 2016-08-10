@@ -10,13 +10,14 @@
 }
 
 .img-figure {
+    position: absolute;
     width: 320px;
     height: 360px;
     margin: 0px;
     padding: 40px;
     background-color: #ffffff;
     text-align: center;
-
+    
     box-sizing: border-box;
 
     cursor: pointer;

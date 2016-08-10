@@ -1,3 +1,10 @@
+@font-face {font-family: 'iconfont';
+  src: url('../fonts/icons/iconfont.eot'); /* IE9*/
+  src: url('../fonts/icons/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/icons/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../fonts/icons/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../fonts/icons/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
 html,body {
   background: #222;
   height: 100%;
@@ -5,9 +12,51 @@ html,body {
 }
 /* 舞台 */
 .stage {
-  height: 780px;
   width:100%;
   background-color: aliceblue;
+}
+/* 控制单元组 */
+.controller-nav{
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  z-index: 101;
+  width: 100%;
+  text-align: center;
+}
+.controller-unit{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #aaa;
+  border-radius: 50%;
+  transform: scale(.5);
+  transition: transform .6s ease-in-out,background-color .3s;
+}
+.is-center {
+  background-color: #07A900;
+  transform: scale(1);
+}
+.is-center::after{
+  color: #fff;
+  font-size: 80%;
+  line-height: 30px;
+
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\e758";
+}
+.is-center.is-inverse {
+  background-color: #04F500;
+  transform: rotateY(180deg);
 }
 
 
